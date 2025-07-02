@@ -1,14 +1,16 @@
-﻿/* Q. 언리얼에서 Actor와 Component의 역할 차이는 무엇이며, 왜 언리얼은 Component 기반 구조를 사용하는가요?
-* 언리얼에서 Actor는 게임 월드의 개체이고, Component는 그 내부에서 기능을 수행하는 모듈이며, Component기반 구조는 재사용성과 확장성을 위해 도입되었다.
-*
-* Q. C++에서 가상 함수(Virtual Function)와 순수 가상 함수(Pure Virtual Function)의 차이는 무엇이며, 각각의 사용 목적은 무엇인가요?
-* 가상 함수는 자식 클래스에서 선택적으로 재정의 가능한 함수이고, 순수 가상 함수는 반드시 오버라이드해야 하는 함수로, 인터페이스처럼 사용되어 추상 클래스를 만든다.
-* 
-* Q. 프로세스 상태 전이(Process State Transition)의 5가지 상태와 각 상태 간 전이 조건을 설명해주세요.
-* 프로세스는 New, Ready, Running, Waiting,Terminated의 5가지 상태를 가지며, CPU 스케줄링, 입출력 요청, 종료 등의 조건에 따라 상태 전이가 이루어진다.
-* 
-* Q. Z-buffer는 무엇이며, 어떤 문제를 해결하기 위해 사용되나요? Z-fighting은 무엇이고, 이를 해결하는 방법은?
-* Z-buffer는 픽셀의 깊이 값을 기록해 가까운 물체만 렌더링되도록 하며, Z-fighting은 Z값이 거의 같은 면이 겹칠 때 생기는 문제로, 오프셋이나 Clipping 조정 등으로 해결할 수 있다.
-* 
-* Q. 선택 정렬(Selection Sort) 알고리즘의 동작 방식과 시간 복잡도를 설명하고, 버블 정렬과의 차이점도 간단히 비교해주세요.
-* 선택 정렬은 최솟값을 선택해 제자리와 교환하는 방식의 정렬로, 비교는 많지만 교환은 적고, 버블 정렬은 인접 요소를 반복 교환해 더 직관적이지만 교환 횟수가 많다.
+﻿#include <iostream>
+using namespace std;
+int num;
+int main()
+{
+    cin >> num;
+    if (num >= 90 && num <= 100) { cout << "A"; }
+    else if(num >= 80 && num <= 89) { cout << "B"; }
+    else if (num >= 70 && num <= 79) { cout << "C"; }
+    else if (num >= 60 && num <= 69) { cout << "D"; }
+    else { cout << "F"; }
+}
+
+// 7/2 : GameplayTag/explicit/시스템 콜/사용자 모드/커널 모드/래스터화/퀵 정렬
+
+// C++ explicit / mutable
